@@ -1,12 +1,12 @@
 const express = require('express');
 const app =express();
-const port = 8082;
+const PORT = 3000;
 const path = require('path')
 const nodemailer = require('nodemailer');
 
 
-app.listen(port,()=>{
-    console.log('code is ready in port',8082);
+app.listen(PORT,()=>{
+    console.log('code is ready in port',3000);
 })
 
 app.use(express.urlencoded({extended:false}));
