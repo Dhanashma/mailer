@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="css/style3.css">
+    <!-- <script src="sample_express.js"></script>
+    <script src="validate.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <form>
+        <input type = "email" id="email" placeholder="Email">
+        <br><br>
+        <input type ="submit" value="Send Email">
+    </form>
+
+    <script>
+        $('form').on('submit',(e)=>{
+            e.preventDefault();
+            const email = $('#email').val().trim();
+
+            const data = {
+                email
+            };
+            $.post('/mailer',data,function(){
+                console.log('server has received data');
+            })
+
+        })
+    </script>
+    
+</body>
+</html>
