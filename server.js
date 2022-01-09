@@ -36,10 +36,10 @@ app.post('/mailer',(req,res)=>{
         if(error){
                console.log(error);
            res.end("Something went wrong");
-        }else{
+        }
+        else{
                console.log("Message sent: " + "Mail sent successfully");
            res.end("sent");
             }
     });
-    res.json({ message: "Message received"})
 });
